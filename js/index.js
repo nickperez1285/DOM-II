@@ -1,4 +1,8 @@
 // Your code goes here\
+
+
+
+
 let select = document.querySelectorAll('p')
 select[0].addEventListener('mouseover', (event)=>{ event.target.style.color = 'blue'})
 select[1].addEventListener('keydown', (event)=>{event.target.style.color = 'green'})
@@ -11,3 +15,14 @@ document.getElementsByTagName('img')[0].addEventListener('contextmenu' () => con
 document.getElementsByTagName('img')[1].addEventListener('mousemove' () => console.log('bang bang '))
 document.addEventListener('resize',()=> console.log('im shrinking!!!!'))
 document.getElementsByClassName('btn')[0].addEventListener('mouseenter', (event) => event.target.style.color = "white")
+
+
+// event.stopPropagation()
+
+
+document.getElementsByClassName('nav-link')[0].addEventListener('click', (event) => {event.stopPropagation();console.log('Home was clicked')})	
+document.getElementsByClassName('nav')[0].addEventListener('click', () => console.log('nav  bar was clicked'))	
+
+// preventDefault()
+
+document.getElementsByClassName('nav')[0].addEventListener('click', (event) => {event.preventDefault()})
